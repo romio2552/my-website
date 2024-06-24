@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>LOGIN</h1>
+        <form class="login-form" onsubmit="handleLogin(event)">
+            <div class="input-group">
+                <label for="username">username :</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">password :</label>
+                <input type="password" id="password" name="password" required>
+                <a href="#" class="forgot-password">forgot password</a>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <div class="divider">or</div>
+        <div class="social-login">
+            <button class="google-btn">Continue with Google</button>
+            <button class="microsoft-btn">Continue with Microsoft</button>
+        </div>
+        <a href="#" class="signup-link">Don’t have an account</a>
+    </div>
+    <div id="footer-date" class="footer-date"></div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p>Do you want to remember your password?</p>
+            <div class="modal-buttons">
+                <button onclick="closeModal()">NO</button>
+                <button onclick="confirmRememberPassword()">YES</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
